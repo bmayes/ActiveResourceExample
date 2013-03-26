@@ -24,7 +24,9 @@ class CustomersController < ApplicationController
   # GET /customers/new
   # GET /customers/new.json
   def new
-    @customer = Customer.new
+
+    #FOR-THE-EXAMPLE - have to define the default values as empty for a NEW.  ActiveRecord you don't need to do this.
+    @customer = Customer.new( :firstname => '', :lastname => '' )
 
     respond_to do |format|
       format.html # new.html.erb
